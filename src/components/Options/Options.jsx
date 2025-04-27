@@ -1,6 +1,6 @@
 import styles from "./Options.module.css";
 
-const Options = ({ options, handleClick }) => {
+const Options = ({ options, handleClick, hasFeedback }) => {
   return (
     <div className={styles.options}>
       {Object.keys(options).map((option) => (
@@ -8,9 +8,11 @@ const Options = ({ options, handleClick }) => {
           {option}
         </button>
       ))}
-      <button className={styles.reset} onClick={handleClick()}>
-        reset
-      </button>
+      {hasFeedback && (
+        <button className={styles.reset} onClick={handleClick()}>
+          reset
+        </button>
+      )}
     </div>
   );
 };

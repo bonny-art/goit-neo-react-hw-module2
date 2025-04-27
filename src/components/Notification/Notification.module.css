@@ -1,8 +1,11 @@
 .notification {
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (min-width: 1440px) {
+    width: 570px;
+  }
 }
 
 .message {
