@@ -56,7 +56,7 @@ function App() {
                 positive={positiveFeedback}
               />
             ) : (
-              <Notification />
+              <Notification>No feedback yet.</Notification>
             )}
           </div>
         </Container>
